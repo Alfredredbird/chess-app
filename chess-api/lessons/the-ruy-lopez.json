@@ -1,0 +1,47 @@
+{
+    "P1": {
+      "T1": "Step 1: Open with 1. e4",
+      "FEN": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+      "Explanation": "White begins by placing a pawn in the center of the board, controlling d5 and f5 squares. This move also opens lines for the queen and light-squared bishop."
+    },
+    "P2": {
+      "T2": "Step 2: Black responds with 1... e5",
+      "FEN": "rnbqkbnr/pppppppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq e6 0 2",
+      "Explanation": "Black mirrors White's move by placing a pawn in the center, controlling d4 and f4 squares, and opening lines for the queen and bishop."
+    },
+    "P3": {
+      "T3": "Step 3: Develop your knight with 2. Nf3",
+      "FEN": "rnbqkbnr/pppppppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2",
+      "Explanation": "White develops a knight to attack the pawn on e5 and prepares for rapid development of pieces."
+    },
+    "P4": {
+      "T4": "Step 4: Black defends with 2... Nc6",
+      "FEN": "r1bqkbnr/pppppppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+      "Explanation": "Black develops a knight to defend the e5 pawn and prepares for piece development on the queenside."
+    },
+    "P5": {
+      "T5": "Step 5: Play 3. Bb5",
+      "FEN": "r1bqkbnr/pppppppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
+      "Explanation": "White develops the light-squared bishop to pin the knight on c6, increasing pressure on Black's position."
+    },
+    "P6": {
+      "T6": "Step 6: Black plays 3... a6",
+      "FEN": "r1bqkbnr/1ppppppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+      "Explanation": "Black challenges the bishop on b5, forcing White to decide whether to retreat or exchange the bishop for the knight."
+    },
+    "P7": {
+      "T7": "Step 7: Decide with 4. Ba4",
+      "FEN": "r1bqkbnr/1ppppppp/p1n5/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 5 4",
+      "Explanation": "White retreats the bishop to a4, maintaining the pin on the knight while preserving the option to castle kingside."
+    },
+    "P8": {
+      "T8": "Step 8: Continue development",
+      "FEN": "r1bqkbnr/1ppppppp/p1n5/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 5 4",
+      "Explanation": "From here, White can focus on completing development with moves like c3, d4, and O-O, preparing for a strong center or kingside play."
+    },
+    "P9": {
+      "T9": "Step 9: Final Position",
+      "FEN": "r1bqkbnr/1ppppppp/p1n5/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 5 4",
+      "Explanation": "This is the basic structure of the Ruy Lopez opening. The game will branch depending on Black's response, such as 3... a6 or alternative defenses."
+    }
+}

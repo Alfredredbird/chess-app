@@ -1,0 +1,47 @@
+{
+    "P1": {
+      "T1": "Step 1: 1. d4 Nf6",
+      "FEN": "rnbqkb1r/pppppppp/5n2/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
+      "Explanation": "Black begins with Nf6, developing the knight and preparing to contest the center, while also keeping flexibility in pawn structure."
+    },
+    "P2": {
+      "T2": "Step 2: 2. c4 e6",
+      "FEN": "rnbqkb1r/pppppppp/4pn2/8/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3",
+      "Explanation": "White plays c4 to support d4 and aim for central dominance. Black responds with e6, preparing to develop the dark-squared bishop and maintain central flexibility."
+    },
+    "P3": {
+      "T3": "Step 3: 3. Nc3 Bb4",
+      "FEN": "rnbqk2r/pppppppp/4pn2/8/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4",
+      "Explanation": "White develops the knight to c3, increasing pressure on d5 and controlling key central squares. Black pins the knight with Bb4, introducing the hallmark of the Nimzo-Indian Defense."
+    },
+    "P4": {
+      "T4": "Step 4: 4. e3 O-O",
+      "FEN": "rnbq1rk1/pppppppp/4pn2/8/1bPP4/4P3/PP2BPPP/R1BQKBNR w KQ - 4 5",
+      "Explanation": "White plays e3 to solidify the center and prepare for development of the dark-squared bishop. Black castles kingside, ensuring king safety and preparing for dynamic counterplay."
+    },
+    "P5": {
+      "T5": "Step 5: 5. Bd3 d5",
+      "FEN": "rnbq1rk1/ppp1pppp/4pn2/3p4/1bPP4/3BPN2/PP3PPP/R1BQK1NR w KQ - 6 6",
+      "Explanation": "White develops the bishop to d3, completing kingside development and aiming at the kingside. Black strikes in the center with d5, challenging White's central control."
+    },
+    "P6": {
+      "T6": "Step 6: 6. Nf3 c5",
+      "FEN": "rnbq1rk1/pp2pppp/4pn2/2p5/1bPP4/3BPN2/PP3PPP/R1BQK1NR w KQ - 8 7",
+      "Explanation": "White develops the knight to f3, increasing control over the center. Black advances the pawn to c5, adding pressure to d4 and creating counterplay on the queenside."
+    },
+    "P7": {
+      "T7": "Step 7: 7. O-O Nc6",
+      "FEN": "r1bq1rk1/pp2pppp/2n1pn2/2p5/1bPP4/3BPN2/PP3PPP/R1BQ1RK1 w - - 10 8",
+      "Explanation": "White castles kingside, ensuring the king's safety and connecting the rooks. Black develops the knight to c6, adding further pressure to d4 and preparing queenside expansion."
+    },
+    "P8": {
+      "T8": "Step 8: 8. a3 Bxc3",
+      "FEN": "r1bq1rk1/pp2pppp/2n1pn2/2p5/2PP4/P3P3/1P3PPP/R1BQ1RK1 w - - 12 9",
+      "Explanation": "White plays a3, forcing Black to exchange the bishop for the knight on c3. Black complies with Bxc3, doubling White's pawns and creating potential weaknesses."
+    },
+    "P9": {
+      "T9": "Step 9: Final",
+      "FEN": "r1bq1rk1/pp2pppp/2n1pn2/2p5/2PP4/P3P3/1P3PPP/R1BQ1RK1 w - - 12 9",
+      "Explanation": "This setup exemplifies the Nimzo-Indian Defense. Black aims for dynamic play by targeting White's doubled pawns and leveraging queenside activity. White seeks compensation through the bishop pair and central control."
+    }
+}  

@@ -1,0 +1,47 @@
+{
+    "P1": {
+      "T1": "Step 1: Identify a piece that can move and uncover an attack",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3Q4/8/PPP1PPPP/RNB1KBNR b KQkq - 0 1",
+      "Explanation": "White has a queen on d1 and a bishop on c4. The bishop can move to b5, uncovering an attack on the knight on c6 and indirectly attacking the king on e8."
+    },
+    "P2": {
+      "T2": "Step 2: Calculate the sequence that creates the discovered attack",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3Q4/8/PPP1PPPP/RNB1KBNR b KQkq - 0 1",
+      "Explanation": "The discovered attack happens when the bishop moves to b5, putting the knight on c6 and the king on e8 under attack."
+    },
+    "P3": {
+      "T3": "Step 3: Execute the move that creates the discovered attack",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3Q2B1/8/PPP1PPPP/RNB1KBNR b KQkq - 0 1",
+      "Explanation": "By moving the bishop to b5, White uncovers an attack on the knight on c6 and places indirect pressure on the king on e8."
+    },
+    "P4": {
+      "T4": "Step 4: The opponent must react to the discovered attack",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3Q2B1/8/PPP1PPPP/RNB1KBNR b KQkq - 0 1",
+      "Explanation": "Black now has to deal with the discovered attack. They must find a way to either block or move their knight to safety."
+    },
+    "P5": {
+      "T5": "Step 5: Black defends with Nc6",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3Q2B1/2N5/PPP1PPPP/RNB1KBNR b KQkq - 0 1",
+      "Explanation": "Black responds with Nc6, blocking the discovered attack and avoiding material loss."
+    },
+    "P6": {
+      "T6": "Step 6: White prepares for another discovered attack",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3Q2B1/2N5/PPP1PPPP/RNB1KBNR b KQkq - 0 1",
+      "Explanation": "After the knight moves, White should look for other potential discovered attacks, perhaps with rook moves or pawn advances."
+    },
+    "P7": {
+      "T7": "Step 7: Create a second discovered attack",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3Q2B1/2N5/PPP1PPPP/R1B1KBNR b KQkq - 0 1",
+      "Explanation": "White can play a move like Re1, uncovering an attack on the knight on c6 while still threatening the king on e8."
+    },
+    "P8": {
+      "T8": "Step 8: Win material with the discovered attack",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3Q2B1/2N5/PPP1PPPP/R1B1KBNR b KQkq - 0 1",
+      "Explanation": "By playing Re1, White can now win material—either capturing the knight on c6 or following up with other threats."
+    },
+    "P9": {
+      "T9": "Step 9: Final",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3Q2B1/2N5/PPP1PPPP/R1B1KBNR b KQkq - 0 1",
+      "Explanation": "Discovered attacks are powerful tactical tools that can lead to material gains if identified and executed properly. Keep an eye out for opportunities to create these attacks!"
+    }
+}  

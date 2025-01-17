@@ -1,0 +1,47 @@
+{
+    "P1": {
+      "T1": "Step 1: Identify a tactical position with immediate threats",
+      "FEN": "r1bqkbnr/pppppppp/8/3n4/3Q4/8/PPP1PPPP/RNB1KBNR b KQkq - 0 1",
+      "Explanation": "White has a tactical opportunity here. Black plays Qg4, targeting the h2 pawn, creating an immediate threat."
+    },
+    "P2": {
+      "T2": "Step 2: Recognize the opportunity to play an in-between move",
+      "FEN": "r1bqkbnr/pppppppp/8/3n4/3Q4/8/PPP1PPPP/RNB1KBNR b KQkq - 0 1",
+      "Explanation": "Before dealing with the threat of the queen on g4, White sees an opportunity to play the move Rd1, pinning the black knight on c6."
+    },
+    "P3": {
+      "T3": "Step 3: Execute the Zwischenzug",
+      "FEN": "r1bqkbnr/pppppppp/8/3n4/3Q4/8/PPP1PPPP/R1B1KBNR b KQkq - 0 1",
+      "Explanation": "The Zwischenzug move Rd1 pins Black’s knight on c6, gaining tempo and creating new tactical opportunities."
+    },
+    "P4": {
+      "T4": "Step 4: Black responds to the Zwischenzug",
+      "FEN": "r1bqkbnr/pppppppp/8/3n4/3Q4/8/PPP1PPPP/R1B1KBNR b KQkq - 0 1",
+      "Explanation": "Black now needs to respond to the pin on c6. They play Nc6, which temporarily ignores the threat on g4 but deals with the pin."
+    },
+    "P5": {
+      "T5": "Step 5: Follow up with the main threat",
+      "FEN": "r1bqkbnr/pppppppp/8/3n4/3Q4/2B5/PPP1PPPP/R1B1KBNR b KQkq - 0 1",
+      "Explanation": "White now continues with the main idea: capturing the pawn on h2, forcing Black to make a difficult decision."
+    },
+    "P6": {
+      "T6": "Step 6: Black captures the pawn",
+      "FEN": "r1bqkbnr/pppppppp/8/3n4/3Q4/2B5/PPP1PPPP/R1B1K2R b KQkq - 0 1",
+      "Explanation": "Black takes the pawn on h2, responding to the threat created by White's initial capture."
+    },
+    "P7": {
+      "T7": "Step 7: White delivers a check",
+      "FEN": "r1bqkbnr/pppppppp/8/3n4/3Q4/2B5/PPP1PPPP/R1B1K2R w KQkq - 1 1",
+      "Explanation": "White follows up with a check on h5, leveraging the pin and attacking the Black king."
+    },
+    "P8": {
+      "T8": "Step 8: Black must respond to the check",
+      "FEN": "r1bqkbnr/pppppppp/8/3n4/3Q4/2B5/PPP1PPPP/2B1K2R b KQkq - 1 1",
+      "Explanation": "Black must now address the check on h5, leading to forced defensive moves."
+    },
+    "P9": {
+      "T9": "Step 9: Final",
+      "FEN": "r1bqkbnr/pppppppp/8/3n4/3Q4/2B5/PPP1PPPP/2B1K2R b KQkq - 1 1",
+      "Explanation": "Zwischenzug is a key tactical tool that allows you to temporarily divert your opponent and create new opportunities. Always be on the lookout for in-between moves!"
+    }
+}  

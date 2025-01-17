@@ -1,0 +1,42 @@
+{
+    "P1": {
+      "T1": "Step 1: Basic principles of King and Pawn Endings",
+      "FEN": "8/8/8/8/8/8/8/4K3 w - - 0 1",
+      "Explanation": "In King and Pawn endings, the goal is to use the king and pawns effectively to promote a pawn while keeping the opponent's king away from your pawns."
+    },
+    "P2": {
+      "T2": "Step 2: King and pawn coordination",
+      "FEN": "8/8/8/8/8/8/5p2/4K3 w - - 0 1",
+      "Explanation": "The king and pawn work together in these endgames. The king supports the pawn and ensures that it can advance safely toward promotion."
+    },
+    "P3": {
+      "T3": "Step 3: Opposition and zugzwang",
+      "FEN": "8/8/8/8/3p4/8/5p2/4K3 w - - 0 1",
+      "Explanation": "In king and pawn endgames, understanding opposition (who moves last) and zugzwang (a position where the opponent is forced to make a move that weakens their position) are key."
+    },
+    "P4": {
+      "T4": "Step 4: Promoting a pawn",
+      "FEN": "8/8/8/8/2p5/8/5P2/4K3 w - - 0 1",
+      "Explanation": "The pawn is close to promotion. King support helps prevent the opponent's king from stopping the pawn from reaching the queening square."
+    },
+    "P5": {
+      "T5": "Step 5: King and pawn use in promotion",
+      "FEN": "8/8/8/8/1p6/8/6P1/4K3 w - - 0 1",
+      "Explanation": "The king guides the pawn to the promotion square while keeping the opponent’s king far away, ensuring safe promotion."
+    },
+    "P6": {
+      "T6": "Step 6: Promoted pawn in action",
+      "FEN": "8/8/8/8/1P6/8/8/4K3 w - - 0 1",
+      "Explanation": "Once promoted, the pawn becomes a queen, and it works with the king to checkmate or further advance the position."
+    },
+    "P7": {
+      "T7": "Step 7: Common pitfalls in King and Pawn Endings",
+      "FEN": "8/8/8/3p4/8/8/8/4K3 b - - 0 1",
+      "Explanation": "One common mistake is not keeping the opposition and overextending the pawns, which can lead to lost positions."
+    },
+    "P8": {
+      "T8": "Step 8: Final",
+      "FEN": "8/8/8/3p4/8/8/8/4K3 b - - 0 1",
+      "Explanation": "King and pawn endings are often about precise calculation and accurate execution. Mastering these endings can often be the key to winning games."
+    }
+}  

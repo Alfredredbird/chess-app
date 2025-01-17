@@ -1,0 +1,47 @@
+{
+    "P1": {
+      "T1": "Step 1: Open with 1. d4",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+      "Explanation": "White places a pawn in the center on d4, controlling e5 and c5 squares. This move sets the foundation for the Queen's Gambit."
+    },
+    "P2": {
+      "T2": "Step 2: Offer the gambit with 2. c4",
+      "FEN": "rnbqkbnr/pppppppp/8/8/2PP4/8/PP3PPP/RNBQKBNR b KQkq - 0 2",
+      "Explanation": "White plays c4, offering the pawn as a gambit to gain control of the center and develop pieces actively."
+    },
+    "P3": {
+      "T3": "Step 3: Develop your knight with 3. Nc3",
+      "FEN": "rnbqkbnr/ppp1pppp/8/8/2PP4/2N5/PP3PPP/R1BQKBNR b KQkq - 1 3",
+      "Explanation": "The knight on c3 supports the d4 pawn and prepares for rapid development. This solidifies White's control of the center."
+    },
+    "P4": {
+      "T4": "Step 4: Develop your dark-squared bishop with 4. Bg5",
+      "FEN": "rnbqkbnr/ppp1pppp/8/8/2PP2B1/2N5/PP3PPP/R2QKBNR b KQkq - 2 4",
+      "Explanation": "The bishop on g5 pins the knight on f6 to the queen, increasing pressure on Black's position and hindering development."
+    },
+    "P5": {
+      "T5": "Step 5: Support the center with e3",
+      "FEN": "rnbqkbnr/ppp1pppp/8/8/2PP2B1/4PN2/PP3PPP/R2QKBNR b KQkq - 3 5",
+      "Explanation": "Playing e3 strengthens the center and opens lines for the light-squared bishop to develop."
+    },
+    "P6": {
+      "T6": "Step 6: Castle kingside",
+      "FEN": "rnbqkbnr/ppp1pppp/8/8/2PP2B1/4PN2/PP3PPP/R2QKB1R b KQkq - 4 6",
+      "Explanation": "Castling kingside ensures the safety of your king and prepares to connect the rooks for better coordination."
+    },
+    "P7": {
+      "T7": "Step 7: Develop the queen's knight with Nf3",
+      "FEN": "rnbqkbnr/ppp1pppp/8/8/2PP2B1/5N2/PP3PPP/R2QKB1R b KQkq - 5 7",
+      "Explanation": "The knight on f3 adds more support to the center and prepares for further development."
+    },
+    "P8": {
+      "T8": "Step 8: Advance the a-pawn to a3",
+      "FEN": "rnbqkbnr/ppp1pppp/8/8/2PP2B1/P4N2/1P3PPP/R2QKB1R b KQkq - 6 8",
+      "Explanation": "Playing a3 prevents Black's bishop or knight from advancing to b4 and prepares for potential queenside expansion."
+    },
+    "P9": {
+      "T9": "Step 9: Final Position",
+      "FEN": "rnbqkbnr/ppp1pppp/8/8/2PP2B1/P4N2/1P3PPP/R2QKB1R b KQkq - 6 8",
+      "Explanation": "This is a typical position in the Queen's Gambit. You've established strong central control and are ready to adapt to Black's response."
+    }
+}

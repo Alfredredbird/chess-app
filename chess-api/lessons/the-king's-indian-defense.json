@@ -1,0 +1,47 @@
+{
+    "P1": {
+      "T1": "Step 1: Open with 1. d4",
+      "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1",
+      "Explanation": "Black plays 1... Nf6, preparing to control the central d4 and e5 squares and aiming for flexibility in defense."
+    },
+    "P2": {
+      "T2": "Step 2: Advance with 2. c4",
+      "FEN": "rnbqkbnr/pppppppp/8/8/8/8/1PPPPPPP/RNBQKBNR b KQkq - 1 2",
+      "Explanation": "White plays 2. c4, aiming to dominate the center and gain space."
+    },
+    "P3": {
+      "T3": "Step 3: Develop your knight with 2... g6",
+      "FEN": "rnbqkbnr/pppppppp/8/8/5K2/8/1PPPPPPP/RNBQBNNR b KQkq - 2 3",
+      "Explanation": "Black develops the knight with 2... g6, preparing to build a solid pawn structure on the kingside and fianchettoing the bishop."
+    },
+    "P4": {
+      "T4": "Step 4: Continue development with 3. Nf3",
+      "FEN": "rnbqkbnr/pppppppp/8/8/5K2/2NP4/1PPPPPPP/R1BQBNNR b KQkq - 3 4",
+      "Explanation": "White continues development with 3. Nf3, preparing to castle and aiming for an active position."
+    },
+    "P5": {
+      "T5": "Step 5: Play 3... d6",
+      "FEN": "rnbqkbnr/pppppppp/8/8/5K2/2NP4/1P1PPPPP/R1BQBNNR b KQkq - 4 5",
+      "Explanation": "Black plays 3... d6, aiming to support the c5 square and prepare for further expansion on the queenside."
+    },
+    "P6": {
+      "T6": "Step 6: Develop the bishop with 4. Bg5",
+      "FEN": "rnbqkbnr/pppppppp/8/8/5K2/2NP4/1P1P1PPP/R1BQBNNR b KQkq - 5 6",
+      "Explanation": "White develops the bishop with 4. Bg5, aiming to control the center and prepare for long-term kingside play."
+    },
+    "P7": {
+      "T7": "Step 7: Continue with 4... Bg7",
+      "FEN": "rnbqkbnr/pppppppp/8/8/5K2/2NP4/1P1P1PPP/R1BQ1BNR b KQkq - 6 7",
+      "Explanation": "Black develops the bishop with 4... Bg7, fianchettoing to control long diagonals and prepare to castle."
+    },
+    "P8": {
+      "T8": "Step 8: Castle kingside",
+      "FEN": "rnbqkbnr/pppppppp/8/8/5K2/2NP4/1P1P1PPP/R1BQ1BNR b KQkq - 7 8",
+      "Explanation": "White castles kingside, ensuring the safety of the king and connecting the rooks for better coordination."
+    },
+    "P9": {
+      "T9": "Step 9: Final Position",
+      "FEN": "rnbqkbnr/pppppppp/8/8/5K2/2NP4/1P1P1PPP/R1BQ1BNR b KQkq - 8 9",
+      "Explanation": "This is a typical position in the King's Indian Defense. Black has a solid pawn structure, active pieces, and is aiming to counterattack the center."
+    }
+}  

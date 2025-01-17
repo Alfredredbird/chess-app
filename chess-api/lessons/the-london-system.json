@@ -1,0 +1,47 @@
+{
+  "P1": {
+    "T1": "Step 1: Open with 1. d4",
+    "FEN": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+    "Explanation": "White places a pawn in the center on d4, controlling e5 and c5 squares. It's the foundation of the London System."
+  },
+  "P2": {
+    "T2": "Step 2: Develop your knight with 2. Nf3",
+    "FEN": "rnbqkbnr/pppppppp/8/8/3P4/5N2/PPP1PPPP/RNBQKB1R b KQkq - 1 2",
+    "Explanation": "The knight on f3 supports the pawn on d4 and prepares for future development."
+  },
+  "P3": {
+    "T3": "Step 3: Develop your bishop with 3. Bf4",
+    "FEN": "rnbqkbnr/pppppppp/8/8/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 2 3",
+    "Explanation": "The bishop on f4 targets the c7 square and is actively placed outside the pawn chain."
+  },
+  "P4": {
+    "T4": "Step 4: Support the center with 4. e3",
+    "FEN": "rnbqkbnr/pppppppp/8/8/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 3 4",
+    "Explanation": "The pawn on e3 solidifies the d4 pawn and opens lines for the light-squared bishop to develop."
+  },
+  "P5": {
+    "T5": "Step 5: Develop your dark-squared bishop with 5. Bd3",
+    "FEN": "rnbqkbnr/pppppppp/8/8/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq - 3 4",
+    "Explanation": "The bishop on d3 prepares for potential attacks on the kingside and adds support to the center."
+  },
+  "P6": {
+    "T6": "Step 6: Castle kingside",
+    "FEN": "rnbqkbnr/pppppppp/8/8/3P1B2/3BPN2/PPP2PPP/RN1Q1RK1 b KQkq - 3 4",
+    "Explanation": "Castling kingside ensures the safety of your king and connects the rooks for future action."
+  },
+  "P7": {
+    "T7": "Step 7: Prepare your rook with Re1",
+    "FEN": "rnbqkbnr/pppppppp/8/8/3P1B2/3BPN2/PPPN1PPP/R2Q1RK1 b KQkq - 3 4",
+    "Explanation": "The knight on d2 supports the knight on f3 and prepares for potential incoming attacks from the left."
+  },
+  "P8": {
+    "T8": "Step 8: Advance c-pawn to c3",
+    "FEN": "rnbqkbnr/pppppppp/8/8/3P1B2/2PBPN2/PP1N1PPP/R2Q1RK1 b KQkq - 3 4",
+    "Explanation": "The c3 pawn adds stability to the d4 pawn and prepares for a future expansion with b2-b4."
+  },
+  "P9": {
+    "T9": "Step 9: Final",
+    "FEN": "rnbqkbnr/pppppppp/8/8/3P1B2/2PBPN2/PP1N1PPP/R2Q1RK1 b KQkq - 3 4",
+    "Explanation": "This should be your outcome of the london system. Keep note, that in some games, you may not be able to complete the opening."
+  }
+}

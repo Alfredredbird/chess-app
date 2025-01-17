@@ -1,0 +1,52 @@
+{
+    "P1": {
+      "T1": "Step 1: White opens with 1. d4",
+      "FEN": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
+      "Explanation": "White places a pawn in the center on d4, controlling e5 and c5 squares and aiming for central control."
+    },
+    "P2": {
+      "T2": "Step 2: Black responds with 1... d5",
+      "FEN": "rnbqkbnr/pppppppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
+      "Explanation": "Black mirrors White's pawn move, challenging the center directly."
+    },
+    "P3": {
+      "T3": "Step 3: White advances with 2. c4",
+      "FEN": "rnbqkbnr/pppppppp/8/3p4/2PP4/8/PP3PPP/RNBQKBNR b KQkq - 0 2",
+      "Explanation": "White offers a pawn to gain further central control and open lines for the pieces."
+    },
+    "P4": {
+      "T4": "Step 4: Black counters with 2... e5",
+      "FEN": "rnbqkbnr/pppppppp/8/3p4/2PP4/8/PP3PPP/RNBQKBNR w KQkq - 0 3",
+      "Explanation": "This is the hallmark of the Albin Countergambit. Black sacrifices the e-pawn to destabilize White's center and create counterplay."
+    },
+    "P5": {
+      "T5": "Step 5: White captures with 3. dxe5",
+      "FEN": "rnbqkbnr/pppppppp/8/4P3/2P5/8/PP3PPP/RNBQKBNR b KQkq - 0 3",
+      "Explanation": "White accepts the pawn sacrifice, opening up the center and leaving Black with opportunities to counterattack."
+    },
+    "P6": {
+      "T6": "Step 6: Black plays 3... d4",
+      "FEN": "rnbqkbnr/pppppppp/8/4P3/3p4/8/PP3PPP/RNBQKBNR w KQkq - 0 4",
+      "Explanation": "Black pushes the d-pawn forward, creating a strong, advanced pawn that can disrupt White's position."
+    },
+    "P7": {
+      "T7": "Step 7: White develops with 4. Nf3",
+      "FEN": "rnbqkbnr/pppppppp/8/4P3/3p4/5N2/PP3PPP/RNBQKB1R b KQkq - 0 4",
+      "Explanation": "White develops the knight to attack the advanced pawn and prepares to continue development."
+    },
+    "P8": {
+      "T8": "Step 8: Black develops with 4... Nc6",
+      "FEN": "r1bqkbnr/pppppppp/2n5/4P3/3p4/5N2/PP3PPP/RNBQKB1R w KQkq - 0 5",
+      "Explanation": "Black brings the knight into the game, adding pressure to the pawn on e5 and supporting the advanced d-pawn."
+    },
+    "P9": {
+      "T9": "Step 9: White plays 5. a3 to control b4",
+      "FEN": "r1bqkbnr/pppppppp/2n5/4P3/3p4/P4N2/1P3PPP/RNBQKB1R b KQkq - 0 5",
+      "Explanation": "White prevents Black from developing the bishop to b4 and prepares to solidify their position."
+    },
+    "P10": {
+      "T10": "Step 10: Black develops with 5... Bg4",
+      "FEN": "r1bqk1nr/ppppppbp/2n5/4P3/3p2b1/P4N2/1P3PPP/RNBQKB1R w KQkq - 0 6",
+      "Explanation": "Black develops the bishop to an active square, pinning the knight on f3 and increasing pressure on White's position."
+    }
+}  

@@ -1,0 +1,47 @@
+{
+    "P1": {
+      "T1": "Step 1: Open with 1. e4",
+      "FEN": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq - 0 1",
+      "Explanation": "White begins by placing a pawn in the center, controlling d5 and f5 squares while opening lines for the queen and light-squared bishop."
+    },
+    "P2": {
+      "T2": "Step 2: Black responds with 1... e6",
+      "FEN": "rnbqkbnr/pppppppp/4p3/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "Explanation": "Black prepares to counter White's central pawn with d5 while keeping the pawn structure solid. This is the hallmark of the French Defense."
+    },
+    "P3": {
+      "T3": "Step 3: White continues with 2. d4",
+      "FEN": "rnbqkbnr/pppppppp/4p3/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq - 0 2",
+      "Explanation": "White builds a strong pawn center, preparing for rapid development of pieces while controlling key central squares."
+    },
+    "P4": {
+      "T4": "Step 4: Black strikes with 2... d5",
+      "FEN": "rnbqkbnr/pppppppp/4p3/3p4/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 3",
+      "Explanation": "Black challenges White's central pawn and begins counterplay against the pawn center."
+    },
+    "P5": {
+      "T5": "Step 5: White advances with 3. e5 (Advance Variation)",
+      "FEN": "rnbqkbnr/pppppppp/4p3/3P4/4P3/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+      "Explanation": "White chooses the Advance Variation, gaining space in the center and restricting Black's light-squared bishop."
+    },
+    "P6": {
+      "T6": "Step 6: Black develops with 3... c5",
+      "FEN": "rnbqkbnr/pp2pppp/4p3/2pP4/4P3/8/PPP2PPP/RNBQKBNR w KQkq - 0 4",
+      "Explanation": "Black immediately attacks the d4 pawn with the c-pawn, applying pressure to White's center."
+    },
+    "P7": {
+      "T7": "Step 7: White defends with 4. c3",
+      "FEN": "rnbqkbnr/pp2pppp/4p3/2pP4/4P3/2P5/PP3PPP/RNBQKBNR b KQkq - 0 4",
+      "Explanation": "White reinforces the d4 pawn, maintaining a strong central presence and preparing for further development."
+    },
+    "P8": {
+      "T8": "Step 8: Black develops with 4... Nc6",
+      "FEN": "r1bqkbnr/pp2pppp/2n1p3/2pP4/4P3/2P5/PP3PPP/RNBQKBNR w KQkq - 0 5",
+      "Explanation": "Black develops the knight to attack the d4 pawn again, while also preparing for potential piece coordination on the queenside."
+    },
+    "P9": {
+      "T9": "Step 9: Develop your pieces and prepare for castling",
+      "FEN": "r1bqkbnr/pp2pppp/2n1p3/2pP4/4P3/2P2N2/PP3PPP/RNBQKB1R b KQkq - 1 5",
+      "Explanation": "From this position, White can develop the knight to f3, the bishop to d3, and castle kingside. The focus should be on completing development and maintaining the central space advantage."
+    }
+}
