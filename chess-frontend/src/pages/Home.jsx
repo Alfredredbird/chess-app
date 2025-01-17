@@ -65,7 +65,7 @@ function Home() {
       {/* Sidebar */}
       <aside className="w-64 bg-gray-800 text-white flex flex-col">
         <div className="p-4 text-2xl font-bold border-b border-gray-700">
-          Chess Website
+          MateInOne
         </div>
         <nav className="flex-grow p-4">
           <ul>
@@ -101,14 +101,26 @@ function Home() {
               Tutorials
             </button>
           </li>
-          <li className="mb-2">
-            <button
-              onClick={() => navigate('/profile')}
-              className="block w-full text-left py-2 px-3 rounded hover:bg-gray-700"
-            >
-              Profile
-            </button>
-          </li>
+          {user ? (
+              <>
+                <li className="mb-2">
+                  <button
+                    onClick={() => navigate('/chat')}
+                    className="block w-full text-left py-2 px-3 rounded hover:bg-gray-700"
+                  >
+                    Chat
+                  </button>
+                </li>
+                <li className="mb-2">
+                  <button
+                    onClick={() => navigate('/profile')}
+                    className="block w-full text-left py-2 px-3 rounded hover:bg-gray-700"
+                  >
+                    Profile
+                  </button>
+                </li>
+              </>
+            ) : null}
           <li>
             <button
               onClick={() => navigate('/contact')}
@@ -120,14 +132,14 @@ function Home() {
           </ul>
         </nav>
         <footer className="p-4 border-t border-gray-700 text-center text-sm">
-          &copy; 2025 Chess Website
+          &copy; 2025 MateInOne
         </footer>
       </aside>
 
       {/* Main Content */}
       <main className="flex-grow flex flex-col items-center p-8 ">
         <h1 className="text-4xl font-bold mb-4 text-center mt-10">
-          Welcome to Chess World!
+          Welcome to MateInOne!
         </h1>
         {/* Display user info or login button */}
         {user ? (
@@ -210,9 +222,13 @@ function Home() {
   </ul>
 </div>
 
+
           <div className="bg-white shadow rounded p-6">
             <ChessBoard />
           </div>
+          <div className="bg-white shadow rounded p-6">
+  <h2 className="text-2xl font-semibold mb-4">Friends</h2>
+  </div>
         </div>
       </main>
     </div>

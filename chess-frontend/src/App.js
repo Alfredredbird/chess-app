@@ -16,6 +16,7 @@ import Openings from './pages/tutorials/Openings.jsx';
 import Lesson from './pages/tutorials/Lesson.jsx';
 import MidgameTactics from './pages/tutorials/MidgameTactics.jsx';
 import EndgameTechniques from './pages/tutorials/EndgameTechniques.jsx';
+import Chat from './pages/Chat.jsx'
 function App() {
   return (
     <BrowserRouter>
@@ -29,6 +30,7 @@ function App() {
         <Route path="/play/" element={<Play />} />
         <Route path="/contact/" element={<Contact />} />
         <Route path="/leaderboard/" element={<LeaderboardPage />} />
+        <Route path="/chat/" element={<Chat />} />
 
         <Route path="/tutorials/" element={<Tutorials />} />
         <Route path="/tutorials/openings/" element={<Openings />} />

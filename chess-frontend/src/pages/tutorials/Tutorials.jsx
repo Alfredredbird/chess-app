@@ -8,7 +8,7 @@ function Tutorial() {
       {/* Sidebar */}
       <aside className="w-64 bg-gray-800 text-white flex flex-col">
         <div className="p-4 text-2xl font-bold border-b border-gray-700">
-          Chess Website
+          MateInOne
         </div>
         <nav className="flex-grow p-4">
           <ul>
@@ -63,7 +63,7 @@ function Tutorial() {
           </ul>
         </nav>
         <footer className="p-4 border-t border-gray-700 text-center text-sm">
-          &copy; 2025 Chess Website
+          &copy; 2025 MateInOne
         </footer>
       </aside>
 
@@ -82,7 +82,7 @@ function Tutorial() {
             <p className="text-gray-700">
               Learn various opening strategies to gain an early advantage in your chess games. Master key moves and setups.
             </p>
-            <p className="text-sm text-gray-500">Difficulty: <span className="text-green-500">Easy</span></p>
+            
           </div>
 
           <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out" onClick={() => navigate('/tutorials/midgametactics')}>
@@ -90,7 +90,7 @@ function Tutorial() {
             <p className="text-gray-700">
               Explore common midgame tactics, such as pins, forks, and skewers, to strengthen your game in the middle stages.
             </p>
-            <p className="text-sm text-gray-500">Difficulty: <span className="text-orange-500">Challenging</span></p>
+            
           </div>
 
           <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out" onClick={() => navigate('/tutorials/endgametechniques')}>
@@ -98,7 +98,7 @@ function Tutorial() {
             <p className="text-gray-700">
               Master crucial endgame techniques like king activity, pawn promotion, and checkmating patterns.
             </p>
-            <p className="text-sm text-gray-500">Difficulty: <span className="text-red-500">Difficult</span></p>
+            
           </div>
 
           <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
@@ -106,7 +106,7 @@ function Tutorial() {
             <p className="text-gray-700">
               Delve into advanced strategies and concepts that elevate your thinking and improve your overall game.
             </p>
-            <p className="text-sm text-gray-500">Difficulty: <span className="text-orange-500">Challenging</span></p>
+            
           </div>
 
           <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
@@ -114,7 +114,7 @@ function Tutorial() {
             <p className="text-gray-700">
               Sharpen your problem-solving skills with chess puzzles that challenge your tactical understanding.
             </p>
-            <p className="text-sm text-gray-500">Difficulty: <span className="text-green-500">Easy</span></p>
+            
           </div>
 
           <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
@@ -122,7 +122,7 @@ function Tutorial() {
             <p className="text-gray-700">
               Learn to identify and avoid common mistakes made by chess players at different levels.
             </p>
-            <p className="text-sm text-gray-500">Difficulty: <span className="text-orange-500">Challenging</span></p>
+            
           </div>
 
           <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
@@ -130,7 +130,7 @@ function Tutorial() {
             <p className="text-gray-700">
               Master effective time management strategies to make the most out of your clock during chess games.
             </p>
-            <p className="text-sm text-gray-500">Difficulty: <span className="text-green-500">Easy</span></p>
+            
           </div>
 
           <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
@@ -138,7 +138,7 @@ function Tutorial() {
             <p className="text-gray-700">
               Gain insights into participating in chess tournaments, preparing for matches, and handling pressure.
             </p>
-            <p className="text-sm text-gray-500">Difficulty: <span className="text-red-500">Difficult</span></p>
+            
           </div>
 
           <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
@@ -146,7 +146,7 @@ function Tutorial() {
             <p className="text-gray-700">
               Explore key checkmating patterns in the endgame and understand how to execute them effectively.
             </p>
-            <p className="text-sm text-gray-500">Difficulty: <span className="text-red-500">Difficult</span></p>
+            
           </div>
 
           <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out">
@@ -154,7 +154,7 @@ function Tutorial() {
             <p className="text-gray-700">
               Learn techniques for analyzing your own games to find areas for improvement and refine your strategy.
             </p>
-            <p className="text-sm text-gray-500">Difficulty: <span className="text-orange-500">Challenging</span></p>
+            
           </div>
           {/* Additional tutorial cards */}
         </div>

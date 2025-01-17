@@ -6,7 +6,7 @@ function Sidebar({ navigate }) {
   return (
     <aside className="w-64 bg-gray-800 text-white flex flex-col">
       <div className="p-4 text-2xl font-bold border-b border-gray-700">
-        Chess Website
+        MateInOne
       </div>
       <nav className="flex-grow p-4">
         <ul>
@@ -61,7 +61,7 @@ function Sidebar({ navigate }) {
         </ul>
       </nav>
       <footer className="p-4 border-t border-gray-700 text-center text-sm">
-        &copy; 2025 Chess Website
+        &copy; 2025 MateInOne
       </footer>
     </aside>
   );
