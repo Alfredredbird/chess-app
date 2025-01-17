@@ -6,15 +6,16 @@ function ChessOpenings() {
 
   const lessons = [
     { name: "The London System", description: "Learn the key moves and setups of the London System, a popular opening known for its solid and flexible nature.", difficulty: "green" },
-    { name: "The Queen's Gambit", description: "Master the intricacies of the Queen's Gambit, a dynamic and aggressive opening that can lead to strategic advantages.", difficulty: "orange" },
-    { name: "The Sicilian Defense", description: "Explore the Sicilian Defense, a counterattacking opening that provides flexibility and strong pawn structures for Black.", difficulty: "red" },
-    { name: "The Ruy Lopez", description: "Delve into the Ruy Lopez, a classic opening with a rich history that leads to complex strategic battles.", difficulty: "orange" },
     { name: "The King's Indian Defense", description: "Learn the King's Indian Defense, a resilient opening for Black that allows counterplay and complex maneuvering.", difficulty: "green" },
-    { name: "The Nimzo-Indian Defense", description: "Master the Nimzo-Indian Defense, an opening that offers Black dynamic possibilities and pawn structure flexibility.", difficulty: "orange" },
     { name: "The French Defense", description: "Explore the French Defense, a reliable opening for Black that focuses on solid pawn structures and gradual piece development.", difficulty: "green" },
-    { name: "The Slav Defense", description: "Discover the Slav Defense, a strong defense for Black that provides robust pawn structures and opportunities for counterplay.", difficulty: "orange" },
     { name: "The English Opening", description: "Learn the principles of the English Opening, a flexible and strategic opening that allows for creative piece play.", difficulty: "green" },
+    { name: "The Queen's Gambit", description: "Master the intricacies of the Queen's Gambit, a dynamic and aggressive opening that can lead to strategic advantages.", difficulty: "orange" },
+    { name: "The Ruy Lopez", description: "Delve into the Ruy Lopez, a classic opening with a rich history that leads to complex strategic battles.", difficulty: "orange" },
+    { name: "The Nimzo-Indian Defense", description: "Master the Nimzo-Indian Defense, an opening that offers Black dynamic possibilities and pawn structure flexibility.", difficulty: "orange" },
+    { name: "The Slav Defense", description: "Discover the Slav Defense, a strong defense for Black that provides robust pawn structures and opportunities for counterplay.", difficulty: "orange" },
     { name: "The Albin Countergambit", description: "Understand the Albin Countergambit, an aggressive and tactical opening that puts pressure on White's center early on.", difficulty: "red" },
+    { name: "The Sicilian Defense", description: "Explore the Sicilian Defense, a counterattacking opening that provides flexibility and strong pawn structures for Black.", difficulty: "red" },
+
   ];
 
   const handleCardClick = (lessonName) => {
@@ -23,7 +24,7 @@ function ChessOpenings() {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
       <aside className="w-64 bg-gray-800 text-white flex flex-col">
         <div className="p-4 text-2xl font-bold border-b border-gray-700">

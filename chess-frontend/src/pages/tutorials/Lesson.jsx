@@ -103,12 +103,12 @@ function Lesson() {
   const currentIndex = partKeys.indexOf(currentPart);
 
   return (
-    <div className="flex h-screen bg-gray-100">
-      <aside className="w-64 bg-gray-800 text-white flex flex-col">
+    <div className="flex min-h-screen bg-gray-100">
+      <aside className="w-64 bg-gray-800 text-white flex flex-col min-h-screen">
         <div className="p-4 text-2xl font-bold border-b border-gray-700">
           Chess Website
         </div>
-        <nav className="flex-grow p-4">
+        <nav className="flex-grow p-4 overflow-y-auto">
           <ul>
             <li className="mb-2">
               <button

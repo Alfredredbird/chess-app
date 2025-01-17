@@ -127,6 +127,7 @@ function MemberPage() {
             <p className="text-lg mb-2">Created At: {userData.created_at}</p>
             <p className="text-lg mb-2">User ID: {userData.id}</p>
             <p className="text-lg mb-4">Description: {userData.description}</p>
+            <img className="w-9 h-6 object-cover" src={`/uploads/flags/${userData.country}-128.png` ? `/uploads/flags/${userData.country}-128.png` : '/uploads/flags/AD-128.png'} alt=""/>
           </div>
           { /* Memver PFP */}
           <div className="bg-white shadow rounded p-6 w-full max-w-4xl">

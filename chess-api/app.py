@@ -618,4 +618,4 @@ def get_json(name):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    app.run(host="192.168.12.185", debug=True)
+    app.run(host="192.168.12.32", debug=True)

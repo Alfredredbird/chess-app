@@ -96,7 +96,7 @@ function UserCard({ user, index }) {
 function MainContent({ leaderboard }) {
   return (
     <main className="flex-grow flex flex-col items-center p-8">
-      <h1 className="text-4xl font-bold mb-4 text-center mt-40">
+      <h1 className="text-4xl font-bold mb-4 text-center mt-10">
         Leaderboard
       </h1>
       <div className="grid grid-cols-1 gap-8 mt-8 w-full max-w-4xl">
@@ -122,7 +122,7 @@ function LeaderboardPage() {
   }, []);
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
       <Sidebar navigate={navigate} />
 

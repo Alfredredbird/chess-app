@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function Tutorial() {
   const navigate = useNavigate();
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
       <aside className="w-64 bg-gray-800 text-white flex flex-col">
         <div className="p-4 text-2xl font-bold border-b border-gray-700">
@@ -38,7 +38,7 @@ function Tutorial() {
             </li>
             <li className="mb-2">
               <button
-                onClick={() => console.log('Navigate to Tutorials')}
+                onClick={() => navigate('/tutorials')}
                 className="block w-full text-left py-2 px-3 rounded hover:bg-gray-700"
               >
                 Tutorials
@@ -76,8 +76,8 @@ function Tutorial() {
           Enhance your chess skills with our step-by-step tutorials. Whether you're a beginner or an experienced player, you'll find valuable tips and strategies here.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8" >
-          <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out" onClick={() => navigate('/tutorials/openings')}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        <div className="bg-white shadow rounded p-6 hover:scale-105 transform transition-transform duration-300 ease-in-out" onClick={() => navigate('/tutorials/openings')}>
             <h2 className="text-2xl font-semibold mb-4">Opening Strategies</h2>
             <p className="text-gray-700">
               Learn various opening strategies to gain an early advantage in your chess games. Master key moves and setups.
@@ -156,6 +156,7 @@ function Tutorial() {
             </p>
             <p className="text-sm text-gray-500">Difficulty: <span className="text-orange-500">Challenging</span></p>
           </div>
+          {/* Additional tutorial cards */}
         </div>
       </main>
     </div>

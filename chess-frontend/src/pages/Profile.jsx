@@ -288,16 +288,22 @@ function EditProfilePage() {
               ></textarea>
             </div>
             <div className="mb-4">
-              <label htmlFor="theme" className="block text-gray-700">Theme</label>
-              <textarea
-                id="theme"
-                name="theme"
-                placeholder='Theme, fire, ice, default'
-                onChange={handleInputChange}
-                className="mt-2 p-2 w-full border border-gray-300 rounded"
-                rows="1"
-              ></textarea>
-              </div>
+  <label htmlFor="theme" className="block text-gray-700">Theme</label>
+  <select
+    id="theme"
+    name="theme"
+    value={formData.theme}
+    onChange={handleInputChange}
+    className="mt-2 p-2 w-full border border-gray-300 rounded"
+  >
+    <option value="">Select a theme</option>
+    <option value="Grass">Grass</option>
+    <option value="Ice">Ice</option>
+    <option value="Fire">Fire</option>
+    <option value="Default">Default</option>
+  </select>
+</div>
+
             <div className="mb-4">
               <label htmlFor="profile_picture" className="block text-gray-700">Profile Picture</label>
               <input

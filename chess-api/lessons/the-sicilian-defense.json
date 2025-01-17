@@ -1,47 +1,47 @@
 {
     "P1": {
       "T1": "Step 1: 1. e4 c5",
-      "FEN": "rnbqkbnr/pppppppp/8/8/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 1",
-      "Explanation": "Black responds to White’s 1. e4 by placing the pawn on c5, aiming to challenge White’s control of the center and start an aggressive counterplay."
+      "FEN": "RNBKQBNR/PPP1PPPP/8/3P4/5p2/8/ppppp1pp/rnbkqbnr w - - 0 1",
+      "Explanation": "The Sicilian defence is a half-opening, meaning it opens with e4 but dose not follow with e5. Black commonly plays c5."
     },
     "P2": {
       "T2": "Step 2: 2. Nf3 Nc6",
-      "FEN": "rnbqkbnr/pppppppp/8/8/3N4/8/PPP1PPPP/RNBQKBNR b KQkq - 1 2",
-      "Explanation": "White develops the knight to f3, controlling the e5 square and preparing for further development. Black responds with Nc6, developing a knight and aiming to contest the center."
+      "FEN": "R1BKQBNR/PPP1PPPP/2N5/3P4/5p2/4p3/pppp2pp/rnbkqbnr w - - 0 1",
+      "Explanation": "Its common for white to counter with f4, so we play pawn d6 in defense."
     },
     "P3": {
       "T3": "Step 3: 3. d4 cxd4",
-      "FEN": "rnbqkbnr/pppppppp/8/8/3N4/4P3/PPP1BPPP/RNBQK1NR b KQkq - 2 3",
-      "Explanation": "White advances the pawn to d4, aiming to control the center. Black captures on d4 with the pawn, opening the center and giving their knight more space to develop."
+      "FEN": "R1BKQBNR/PPP2PPP/2N5/3Pp3/8/4p3/pppp2pp/rnbkqbnr w - - 0 1",
+      "Explanation": "White would commonly play pawn to d4, in which black would take it with its pawn on c5."
     },
     "P4": {
       "T4": "Step 4: 4. Nxd4 Nf6",
-      "FEN": "rnbqkbnr/pppppppp/8/8/3N4/2P2P2/PPP1BPPP/RNBQK1NR b KQkq - 3 4",
-      "Explanation": "White recaptures with the knight, gaining control of the d4 square. Black develops the knight to f6, aiming to complete their development and prepare for kingside action."
+      "FEN": "R1BKQBNR/PPP2PPP/8/3PN3/8/2n1p3/pppp2pp/r1bkqbnr w - - 0 1",
+      "Explanation": "White recaptures the d4 square with the knight. Black develops the knight to f6, aiming to complete their development and prepare for kingside action."
     },
     "P5": {
       "T5": "Step 5: 5. Nc3 d6",
-      "FEN": "rnbqkbnr/pppppppp/8/8/3N4/2P2P2/PPP1B1PP/RNBQK1NR b KQkq - 4 5",
+      "FEN": "R1BKQB1R/PPP2PPP/5N2/3PN3/8/2n1p3/pppp2pp/r1bkqbnr w - - 0 1",
       "Explanation": "White develops the second knight to c3, supporting the center and preparing for kingside castling. Black plays d6 to strengthen the position and prepare for castling."
     },
     "P6": {
       "T6": "Step 6: 6. Be2 e6",
-      "FEN": "rnbqkbnr/pppppppp/8/8/3N4/2P2P2/PPP1B1PP/RNBQK1NR b KQkq - 5 6",
-      "Explanation": "White develops the bishop to e2, developing the pieces harmoniously. Black responds with e6, preparing to bring the light-squared bishop into play and supporting the pawn chain."
+      "FEN": "R1BKQ2R/PPP2PPP/3B1N2/3PN3/8/1pn1p3/p1pp2pp/r1bkqbnr b - - 0 1",
+      "Explanation": "Black will play pawn to g6, then white will bring the bishop from c1 to e3"
     },
     "P7": {
       "T7": "Step 7: 7. O-O Be7",
-      "FEN": "rnbqkbnr/pppppppp/8/8/3N4/2P2P2/PPP1B1PP/RNBQK1NR b KQkq - 6 7",
-      "Explanation": "White castles kingside, ensuring king safety and preparing for future rooks to join the action. Black completes development by moving the bishop to e7, aiming to control the center and defend the d5 square."
+      "FEN": "R1BKQ2R/PPP2PPP/3B1N2/3PN3/8/1pn1p3/p1pp2pp/r1bkqbnr b - - 0 1",
+      "Explanation": "At this point, we can see the board is almost completely developed. The only issue is castling."
     },
     "P8": {
       "T8": "Step 8: 8. f3 O-O",
-      "FEN": "rnbqkbnr/pppppppp/8/8/3N4/2P2P2/PPP1B1PP/RNBQK1NR b KQkq - 7 8",
-      "Explanation": "White plays f3, supporting the e4 pawn and opening lines for kingside action. Black castles kingside, safely positioning their king and completing the initial setup."
+      "FEN": "R1BKQ2R/PP3PPP/2PB1N2/3PN3/8/1pn1p3/pbpp2pp/r2kqbnr b - - 0 1",
+      "Explanation": "Black moves the bishop to g7 and white moves the pawn to f3."
     },
     "P9": {
       "T9": "Step 9: Final",
-      "FEN": "rnbqkbnr/pppppppp/8/8/3N4/2P2P2/PPP1B1PP/RNBQK1NR b KQkq - 8 9",
-      "Explanation": "This setup is a classic example of the Sicilian Defense, which focuses on piece development, pawn breaks, and control of key squares. The Sicilian often leads to dynamic and complex positions."
+      "FEN": "R1BK3R/PP2QPPP/2PB1N2/3PN3/8/1pn1pn2/pbpp2pp/1kr1qb1r w - - 0 1",
+      "Explanation": "Black moves to c6, followed by white's queen to d2, then black castles king side. This was the Dragon variation of the Sicilian Defense. We will cover the other variations in upcomning lessons."
     }
 }  

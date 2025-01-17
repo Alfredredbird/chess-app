@@ -7,7 +7,7 @@ function Play() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
       <aside className="w-64 bg-gray-800 text-white flex flex-col">
         <div className="p-4 text-2xl font-bold border-b border-gray-700">
