@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
 function MemberPage() {
   const { username } = useParams();
   const [userData, setUserData] = useState(null);
   const [recentGames, setRecentGames] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     fetch(`http://192.168.12.32:5000/api/member/${username}`)
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Failed to fetch user data');
+          throw new Error("Failed to fetch user data");
         }
-        
         return response.json();
       })
       .then((data) => {
@@ -22,7 +22,7 @@ function MemberPage() {
         setLoading(false);
       })
       .catch((error) => {
-        console.error('Error fetching user data:', error);
+        console.error("Error fetching user data:", error);
         setLoading(false);
       });
 
@@ -30,7 +30,7 @@ function MemberPage() {
     fetch(`http://192.168.12.32:5000/api/recent_games/${username}`)
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Failed to fetch recent games');
+          throw new Error("Failed to fetch recent games");
         }
         return response.json();
       })
@@ -38,10 +38,65 @@ function MemberPage() {
         setRecentGames(data.recent_games);
       })
       .catch((error) => {
-        console.error('Error fetching recent games:', error);
+        console.error("Error fetching recent games:", error);
       });
   }, [username]);
+
+  const handleAddFriend = () => {
+    console.log("handleAddFriend triggered");  // Debugging step
+    const cookie = document.cookie.split("; ").find((row) => row.startsWith("authToken="))?.split("=")[1];
   
+    if (!cookie) {
+      alert("You are not logged in!");
+      return;
+    }
+  
+    // Verify the user's cookie
+    fetch("http://192.168.12.32:5000/api/verify_cookie", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ cookie }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          console.log("Cookie verified successfully");
+          const loggedInUser = data.user.user_name;
+  
+          fetch("http://192.168.12.32:5000/api/add_friend", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              sender_username: loggedInUser,
+              receiver_username: userData.user_name,
+            }),
+          })
+            .then((response) => response.json())
+            .then((friendData) => {
+              console.log(friendData);  // Debugging step
+              if (friendData.success) {
+                alert(`${userData.user_name} has been added as a friend!`);
+              } 
+            })
+            .catch((error) => {
+              console.error("Error adding friend:", error);
+              alert("Failed to add friend.");
+            });
+        } else {
+          alert(data.error || "Invalid login session.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error verifying cookie:", error);
+        alert("Failed to verify login session.");
+      });
+  };
+  
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -93,7 +148,7 @@ function MemberPage() {
             </li>
             <li className="mb-2">
               <button
-                onClick={() => navigate('/profile')}
+                onClick={() => navigate("/profile")}
                 className="block w-full text-left py-2 px-3 rounded hover:bg-gray-700"
               >
                 Profile
@@ -119,25 +174,45 @@ function MemberPage() {
         <h1 className="text-4xl font-bold mb-4 text-center mt-10">
           Member Page: {userData.user_name}
         </h1>
-        <div className="grid grid-cols-2 gap-8 mt-8">
-          {/* InfoCard */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          {/* User Info Card */}
           <div className="bg-white shadow rounded p-6 w-full max-w-4xl">
-            <h2 className="text-2xl font-semibold mb-4">Member Information</h2>
-            <p className="text-lg mb-2">Wins: {userData.wins}</p>
-            <p className="text-lg mb-2">Created At: {userData.created_at}</p>
-            <p className="text-lg mb-2">User ID: {userData.id}</p>
-            <p className="text-lg mb-4">Description: {userData.description}</p>
-            <img className="w-9 h-6 object-cover" src={`/uploads/flags/${userData.country}-128.png` ? `/uploads/flags/${userData.country}-128.png` : '/uploads/flags/AD-128.png'} alt=""/>
-          </div>
-          { /* Memver PFP */}
-          <div className="bg-white shadow rounded p-6 w-full max-w-4xl">
-          <img 
-            src={userData.user_pfp ? `/${userData.user_pfp}` : '/uploads/profilepick/default.png'} 
-            alt="" 
-            className="rounded mx-auto mb-4 w-full md:w-1/3 lg:w-1/4 xl:w-1/5" 
-          />
-
-
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-semibold">Member Information</h2>
+              <button
+                onClick={handleAddFriend}
+                className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+              >
+                Add Friend
+              </button>
+            </div>
+            <div className="flex items-center gap-6">
+              <img
+                src={
+                  userData.user_pfp
+                    ? `/${userData.user_pfp}`
+                    : "/uploads/profilepick/default.png"
+                }
+                alt="User Profile"
+                className="rounded-full w-24 h-24 border border-gray-300"
+              />
+              <div>
+                <p className="text-lg">
+                  <span className="font-semibold">Wins:</span> {userData.wins}
+                </p>
+                <p className="text-lg">
+                  <span className="font-semibold">Created At:</span>{" "}
+                  {userData.created_at}
+                </p>
+                <p className="text-lg">
+                  <span className="font-semibold">User ID:</span> {userData.id}
+                </p>
+                <p className="text-lg">
+                  <span className="font-semibold">Description:</span>{" "}
+                  {userData.description}
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Recent Games */}
@@ -145,18 +220,27 @@ function MemberPage() {
             <h2 className="text-2xl font-semibold mb-4">Recent Games</h2>
             <ul>
               {recentGames.map((game) => (
-                <li key={game.id} className="mb-4">
+                <li
+                  key={game.id}
+                  className="mb-4 p-3 border border-gray-200 rounded"
+                >
                   <span>
-                    <a href={`/member/${game.player1}`} className="text-blue-600 hover:underline">
+                    <a
+                      href={`/member/${game.player1}`}
+                      className="text-blue-600 hover:underline"
+                    >
                       {game.player1}
-                    </a>{' '}
-                    vs{' '}
-                    <a href={`/member/${game.player2}`} className="text-blue-600 hover:underline">
+                    </a>{" "}
+                    vs{" "}
+                    <a
+                      href={`/member/${game.player2}`}
+                      className="text-blue-600 hover:underline"
+                    >
                       {game.player2}
                     </a>
                   </span>
-                  <span className="text-sm text-green-500 font-semibold">
-                    Winner: {game.winner || 'Draw'}
+                  <span className="ml-4 text-sm text-green-500 font-semibold">
+                    Winner: {game.winner || "Draw"}
                   </span>
                 </li>
               ))}

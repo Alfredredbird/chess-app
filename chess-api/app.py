@@ -140,7 +140,24 @@ class chess_puzzles(db.Model):
         self.gameurl = gameurl
         self.openingtags = openingtags
     
+class friendrequest(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    sender_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    receiver_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    status = db.Column(db.String(20), nullable=False, default="pending")  # e.g., "pending", "accepted", "rejected"
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
+    def __repr__(self):
+        return f"<FriendRequest {self.id} from {self.sender_id} to {self.receiver_id} ({self.status})>"
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "sender_id": self.sender_id,
+            "receiver_id": self.receiver_id,
+            "status": self.status,
+            "created_at": self.created_at
+        }
 
 def format_user(user):
     return {
@@ -436,6 +453,52 @@ def get_user_info(username):
         return {"user": user_data}, 200
     else:
         return {"error": "User not found"}, 404
+
+@app.route('/api/add_friend', methods=['POST'])
+def add_friend():
+    # Get the sender and receiver information from the request
+    data = request.get_json()
+    sender_username = data.get('sender_username')
+    receiver_username = data.get('receiver_username')
+
+    # Validate the input
+    if not sender_username or not receiver_username:
+        return {"error": "Sender and receiver usernames are required"}, 400
+
+    # Find sender and receiver in the User table
+    sender = User.query.filter_by(user_name=sender_username).first()
+    receiver = User.query.filter_by(user_name=receiver_username).first()
+
+    if not sender:
+        return {"error": "Sender not found"}, 404
+    if not receiver:
+        return {"error": "Receiver not found"}, 404
+
+    # Check if a pending friend request already exists
+    existing_request = friendrequest.query.filter_by(
+        sender_id=sender.id,
+        receiver_id=receiver.id,
+        status="pending"
+    ).first()
+
+    if existing_request:
+        return {"error": "Friend request already sent"}, 409
+
+    # Create a new friend request
+    friend_request = friendrequest(sender_id=sender.id, receiver_id=receiver.id)
+    db.session.add(friend_request)
+    db.session.commit()
+
+    return {"message": "Friend request sent successfully", "request": friend_request.to_dict()}, 201
+
+@app.route('/api/friend_requests/<int:user_id>', methods=['GET'])
+def get_friend_requests(user_id):
+    friend_requests = friendrequest.query.filter_by(receiver_id=user_id).all()
+    
+    if friend_requests:
+        return {"friend_requests": [request.to_dict() for request in friend_requests]}, 200
+    else:
+        return {"message": "No friend requests found for this user"}, 404
 
 ###
 # Auth
