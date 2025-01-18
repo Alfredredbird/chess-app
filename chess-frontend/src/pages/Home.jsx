@@ -63,26 +63,31 @@ function Home() {
   useEffect(() => {
     if (user) {
       const interval = setInterval(() => {
-        fetch(`http://192.168.12.32:5000/api/friend_requests/${user.id}`)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            return response.json();
+        fetch(`http://192.168.12.32:5000/api/member/${user.user_name}`)
+          .then((response) => response.json())
+          .then((userData) => {
+            fetch(`http://192.168.12.32:5000/api/friend_requests/${userData.user_id}`)
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+                return response.json();
+              })
+              .then((data) => {
+                if (data.friend_requests.length > 0) {
+                  // Popup code for displaying the friend request
+                  alert(`You have ${data.friend_requests.length} new friend requests!`);
+                }
+              })
+              .catch((error) => {
+                console.error('Error fetching friend requests:', error);
+                if (error.message === 'Network response was not ok') {
+                  // Handle the 404 error (not found)
+                  console.error('Friend requests not found for the user');
+                }
+              });
           })
-          .then((data) => {
-            if (data.friend_requests.length > 0) {
-              // Popup code for displaying the friend request
-              alert(`You have ${data.friend_requests.length} new friend requests!`);
-            }
-          })
-          .catch((error) => {
-            console.error('Error fetching friend requests:', error);
-            if (error.message === 'Network response was not ok') {
-              // Handle the 404 error (not found)
-              console.error('Friend requests not found for the user');
-            }
-          });
+          .catch((error) => console.error('Error fetching user data:', error));
       }, 15000); // 15 seconds interval
 
       return () => clearInterval(interval); // Cleanup interval on component unmount
@@ -198,7 +203,7 @@ function Home() {
                   </span>
                   <a
                     href={`/member/${user.user_name}`}
-                    className="text-blue-600  flex items-center"
+                    className="text-blue-600 flex items-center"
                   >
                     <span className="text-gray-800 font-medium">
                       {user.user_name}
