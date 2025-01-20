@@ -93,7 +93,7 @@ function MemberPage() {
       alert("You are not logged in!");
       return;
     }
-
+    const cookie = document.cookie.split("; ").find((row) => row.startsWith("authToken="))?.split("=")[1];
     fetch("http://192.168.12.32:5000/api/add_friend", {
       method: "POST",
       headers: {
@@ -102,6 +102,7 @@ function MemberPage() {
       body: JSON.stringify({
         sender_username: loggedInUser.user_name,
         receiver_username: userData.user_name,
+        sender_cookie: cookie
       }),
     })
       .then((response) => response.json())
@@ -116,7 +117,41 @@ function MemberPage() {
         console.error("Error adding friend:", error);
       });
   };
+  const handleCancelFriend = () => {
+    if (!loggedInUser) {
+      alert("You are not logged in!");
+      return;
+    }
+    const cookie = document.cookie.split("; ").find((row) => row.startsWith("authToken="))?.split("=")[1];
+    fetch("http://192.168.12.32:5000/api/cancel_friend", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        user_cookie: cookie,
+        receiver_id: userData.id, // Receiver ID of the friend request
 
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.message) {
+          alert("Friend request canceled successfully.");
+          // Optionally, reload or update the state to reflect changes
+          setFriendRequests((prevRequests) =>
+            prevRequests.filter((request) => request.receiver_id !== userData.id)
+          );
+          
+        } else {
+          alert("Failed to cancel friend request: " + data.error);
+        }
+      })
+      .catch((error) => {
+        console.error("Error canceling friend request:", error);
+      });
+  };
+  
   const isPending = friendRequests.some(
     (request) =>
       request.receiver_id === userData?.id &&
@@ -204,9 +239,9 @@ function MemberPage() {
               <h2 className="text-2xl font-semibold">Member Information</h2>
               {isPending ? (
                 <button
-                  className="bg-orange-500 text-white py-2 px-4 rounded cursor-not-allowed"
-                  disabled
-                >
+                onClick={handleCancelFriend}
+                className="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600"
+              >
                   Pending
                 </button>
               ) : (

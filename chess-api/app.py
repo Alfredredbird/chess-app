@@ -143,6 +143,7 @@ class chess_puzzles(db.Model):
 class friendrequest(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     sender_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    sender_cookie = db.Column(db.String(60), nullable=False, default='none')
     receiver_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     status = db.Column(db.String(20), nullable=False, default="pending")  # e.g., "pending", "accepted", "rejected"
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
@@ -459,8 +460,9 @@ def add_friend():
     # Get the sender and receiver information from the request
     data = request.get_json()
     sender_username = data.get('sender_username')
+    sender_cookie = data.get('sender_cookie')
     receiver_username = data.get('receiver_username')
-
+    print(sender_cookie)
     # Validate the input
     if not sender_username or not receiver_username:
         return {"error": "Sender and receiver usernames are required"}, 400
@@ -477,19 +479,70 @@ def add_friend():
     # Check if a pending friend request already exists
     existing_request = friendrequest.query.filter_by(
         sender_id=sender.id,
+        sender_cookie=sender_cookie,
         receiver_id=receiver.id,
         status="pending"
+        
     ).first()
 
     if existing_request:
         return {"error": "Friend request already sent"}, 409
 
     # Create a new friend request
-    friend_request = friendrequest(sender_id=sender.id, receiver_id=receiver.id)
+    friend_request = friendrequest(sender_id=sender.id, sender_cookie=sender_cookie, receiver_id=receiver.id)
     db.session.add(friend_request)
     db.session.commit()
 
     return {"message": "Friend request sent successfully", "request": friend_request.to_dict()}, 201
+
+@app.route('/api/cancel_friend', methods=['POST'])
+def cancel_friend():
+    try:
+        # Get the user's cookie from the request
+        cookie = request.json.get('user_cookie')
+        if not cookie:
+            return {"error": "Authentication required"}, 401
+
+        # Verify the cookie in the Auth table
+        auth_entry = Auth.query.filter_by(cookie=cookie).first()
+        if not auth_entry:
+            return {"error": "Invalid cookie or not authorized"}, 403
+
+        # Get the receiver's user ID from the request JSON
+        receiver_id = request.json.get('receiver_id')
+        if not receiver_id:
+            return {"error": "Receiver ID is required"}, 400
+
+        # Get the sender's user ID from the request JSON or use the authenticated user's ID
+        sender_id = request.json.get('sender_id')
+        if not sender_id:
+            # If sender_id is not provided, fetch it using the authenticated user's username
+            sender = User.query.filter_by(user_name=auth_entry.user_name).first()
+            if not sender:
+                return {"error": "Sender not found"}, 404
+            sender_id = sender.id
+
+        # Find the pending friend request sent by the sender to the receiver
+        friend_request = friendrequest.query.filter_by(
+            sender_id=sender_id,
+            receiver_id=receiver_id,
+            status="pending"
+        ).first()
+
+        if not friend_request:
+            return {"error": "No pending friend request found"}, 404
+
+        # Delete the friend request
+        db.session.delete(friend_request)
+        db.session.commit()
+
+        return {"message": "Friend request canceled successfully"}, 200
+
+    except Exception as e:
+        return {"error": str(e)}, 500
+
+
+
 
 @app.route('/api/friend_requests/<int:user_id>', methods=['GET'])
 def get_friend_requests(user_id):
