@@ -11,7 +11,7 @@ from flask_cors import CORS
 from flask_caching import Cache
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1BigRedBird@localhost/chess'
+
 db = SQLAlchemy(app)
 CORS(app)
 
